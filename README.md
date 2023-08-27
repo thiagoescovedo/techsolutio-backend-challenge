@@ -1,45 +1,28 @@
-# Simple CRUD
-This repository contains a simple CRUD project built using Java Spring. The aim of this repository is to practice and share how you can build all CRUD Methods using Java Spring.
+TechSolutio Challenge
 
-This project was build during a [live in my Youtube Channel](https://www.youtube.com/watch?v=tP6wtEaCnSI).
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+MySQL Server, 8.0.21 version
 
-## Table of Contents
+SCRIPT:
 
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [API Endpoints](#api-endpoints)
-- [Database](#database)
+CREATE DATABASE crudtech;
 
-## Installation
+use crudtech;
 
-1. Clone the repository:
-
-```bash
-git clone https://github.com/Fernanda-Kipper/live-crud-java-spring.git
-```
-
-2. Install dependencies with Maven
-
-## Usage
-
-1. Start the application with Maven
-2. The API will be accessible at http://localhost:8080
+CREATE TABLE product (
+id SERIAL PRIMARY KEY,
+name VARCHAR(255),
+supplier VARCHAR(255),
+price INT
+);
 
 
-## API Endpoints
-The API provides the following endpoints:
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+In order to run the project, it may be necessary to change the connection settings found in application.properties
+Configurations :
 
-```markdown
-GET / - Retrieve a list of all data.
+spring.datasource.url=jdbc:mysql://localhost:3306/crudtech
+spring.datasource.username=root
+spring.datasource.password=tech123
 
-POST / - Register a new data.
-
-PUT / - Alter data.
-
-DELETE / - Delete data.
-```
-
-## Database
-The project utilizes PostgresSQL as the database. The necessary database migrations are managed using Flyway.
-
-To [install PostgresSQL])(https://www.postgresql.org/download/) you can install here.
+Thiago Escovedo da Costa
